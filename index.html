@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magic 8-Ball</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="title">Magic 8-Ball</h1>
+
+    <div class="ball-container">
+      <div id="ball" class="ball">
+        <div id="display" class="display">
+          <span class="eight">8</span>
+          <span class="answer"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="question" type="text" placeholder="Ask a yes/no question..." autocomplete="off">
+      <button id="shake">Shake</button>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
